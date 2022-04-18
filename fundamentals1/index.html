@@ -1,14 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="./styles.css">
   <meta charset="UTF-8">
-  <title>Odin JavaScript Fundamentals</title>
+  <title>Page Title</title>
 </head>
 <body>
   <script>
-    // Your JavaScript goes here!
-    console.log("Hello, World!")
+   function add7(number) {
+       number + 7
+       return number + 7
+   }
+
+   let add8 = function(number1) {
+     number1 + 8
+     return number1 + 8
+   }
+
+   let add9 = (number2) => number2 + 9;
+
+   let multiply = (no1, no2) => no1 * no2;
+
+   function multiply2 (no1, no2) {
+     no1 * no2
+     return no1 * no2
+   }
+
+   function capitalize (string1) {
+     string1[0].toUpperCase() + string1.substring(1).toLowerCase()
+     return string1[0].toUpperCase() + string1.substring(1).toLowerCase()
+   };
+
+   let capitalize2 = (string1) => string1[0].toUpperCase() + string1.substring(1).toLowerCase();
+
+   function LastLetter (string) {
+     string.substr(-1)
+     return string.substr(-1)
+   }
+
+   let LastLetter2 = (string) => string.substr(-1);
+
   </script>
 </body>
 </html>

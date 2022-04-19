@@ -33,7 +33,8 @@ function playRound (playerSelection, computerSelection) {
         return "You win. Scissors beat Paper."
     } else if (playerSelection1 === "Scissors" && computerSelection === "Rock") {
         return "You lose. Rock beats Scissors."
-    }   
+    } else
+    return "You lose. You did not play rock, paper or scissors."  
 }
 
 function playerPlay () {
@@ -41,17 +42,18 @@ function playerPlay () {
     return playersTurn
 }
 
-/* let playerSelection = playerPlay();
-const computerSelection = computerPlay();
-
-console.log(playRound(playerSelection, computerSelection));
-
-function test () {
-    let game = playRound(playerSelection, computerSelection);
-    return game
-} */
-
 function playGame () {
-    let game2 = playRound(playerPlay(), computerPlay());
-    return game2
+    let game = playRound(playerPlay(), computerPlay());
+    return game
+}
+
+let results = new Array (0);
+
+function bestOfFive() {
+    results.splice(0, results.length)
+    for (let i = 0; i < 5; i++) {
+        let game2 = playGame ()
+        results.push(game2)
+        console.log(game2)
+    }
 }

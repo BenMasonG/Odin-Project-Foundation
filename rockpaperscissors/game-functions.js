@@ -1,4 +1,4 @@
-function computerSelection () {
+function computerPlay () {
    let computersTurn = Math.floor((Math.random() * 3) + 1);
 
 if (computersTurn === 1) {
@@ -12,7 +12,7 @@ if (computersTurn === 1) {
 
 
 function playRound (playerSelection, computerSelection) {
-    
+ 
    let playerSelection1 = playerSelection[0].toUpperCase() + playerSelection.substring(1).toLowerCase();
 
     if (playerSelection1 === "Rock" && computerSelection === "Scissors") {
@@ -36,3 +36,22 @@ function playRound (playerSelection, computerSelection) {
     }   
 }
 
+function playerPlay () {
+    let playersTurn = prompt("Play Rock, Paper or Scissors");
+    return playersTurn
+}
+
+/* let playerSelection = playerPlay();
+const computerSelection = computerPlay();
+
+console.log(playRound(playerSelection, computerSelection));
+
+function test () {
+    let game = playRound(playerSelection, computerSelection);
+    return game
+} */
+
+function playGame () {
+    let game2 = playRound(playerPlay(), computerPlay());
+    return game2
+}

@@ -57,3 +57,40 @@ function bestOfFive() {
         console.log(game2)
     }
 }
+
+let wins = new Array (0);
+let numberOfWins = new Array (0);
+
+function findWins () {
+    wins.splice(0, results.length)
+    numberOfWins.splice(0, results.length)
+    for (let i = 0; i < results.length; i++)
+    wins.push(results[i].split("win").length - 1)
+    numberOfWins.push(wins.filter(Boolean));
+}
+
+let loses = new Array (0);
+let numberOfLoses = new Array (0);
+
+function findLoses () {
+    loses.splice(0, results.length)
+    numberOfLoses.splice(0, results.length)
+    for (let i = 0; i < results.length; i++)
+    loses.push(results[i].split("lose").length - 1)
+    numberOfLoses.push(loses.filter(Boolean));
+}
+
+let draws = new Array (0);
+let numberOfDraws = new Array (0);
+
+function findDraws () {
+    draws.splice(0, results.length)
+    numberOfDraws.splice(0, results.length)
+    for (let i = 0; i < results.length; i++)
+    draws.push(results[i].split("draw").length - 1)
+    numberOfDraws.push(draws.filter(Boolean)); 
+}
+
+/* let numberOfWins = wins.filter(Boolean);
+let numberOfLoses = loses.filter(Boolean);
+let numberOfDraws = draws.filter (Boolean); */

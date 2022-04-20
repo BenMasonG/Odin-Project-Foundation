@@ -49,7 +49,7 @@ function computerPlay () {
  
  let results = new Array (0);
  
- function bestOfFive() {
+ function playFiveRounds() {
      results.splice(0, results.length)
      for (let i = 0; i < 5; i++) {
          let game2 = playGame ()
@@ -102,3 +102,8 @@ function computerPlay () {
      } else 
      return "It's a draw!"
  }
+
+ function bestOfFive () {
+    playFiveRounds() 
+     return declareWinner()
+    }
